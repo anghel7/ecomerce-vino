@@ -32,6 +32,8 @@ export class FuseConfigService
     {
         // Set the default config from the user provided config (from forRoot)
         this._defaultConfig = _config;
+        console.log('fuse config>>> ', this._defaultConfig);
+        
 
         // Initialize the service
         this._init();
