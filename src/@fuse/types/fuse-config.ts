@@ -4,7 +4,7 @@ export interface FuseConfig
     customScrollbars: boolean;
     layout: {
         style: string,
-        width: 'fullwidth' | 'boxed',
+        width: 'fullwidth' | 'boxed'  | any, // change any
         navbar: {
             primaryBackground: string,
             secondaryBackground: string,

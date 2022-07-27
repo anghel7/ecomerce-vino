@@ -1,4 +1,5 @@
 import { FuseConfig } from '@fuse/types';
+import { environment } from '../../environments/environment';
 
 /**
  * Default Fuse Configuration
@@ -14,29 +15,29 @@ export const fuseConfig: FuseConfig = {
     customScrollbars: true,
     layout          : {
         style    : 'vertical-layout-1',
-        width    : 'fullwidth',
+        width    : environment.defaultLayoutConfig.layout.width,
         navbar   : {
             primaryBackground  : 'fuse-navy-700',
             secondaryBackground: 'fuse-navy-900',
             folded             : false,
-            hidden             : false,
+            hidden             : environment.defaultLayoutConfig.layout.navbar.hidden,
             position           : 'left',
             variant            : 'vertical-style-1'
         },
         toolbar  : {
             customBackgroundColor: false,
             background           : 'fuse-white-500',
-            hidden               : false,
+            hidden               : environment.defaultLayoutConfig.layout.toolbar.hidden,
             position             : 'below-static'
         },
         footer   : {
             customBackgroundColor: true,
             background           : 'fuse-navy-900',
-            hidden               : false,
+            hidden               : environment.defaultLayoutConfig.layout.footer.hidden,
             position             : 'below-fixed'
         },
         sidepanel: {
-            hidden  : false,
+            hidden  : environment.defaultLayoutConfig.layout.sidepanel.hidden,
             position: 'right'
         }
     }
